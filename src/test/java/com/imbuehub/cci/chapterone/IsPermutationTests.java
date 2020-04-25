@@ -28,4 +28,11 @@ public class IsPermutationTests {
         "String 'ab' is a permutation of 'ba' and should return true",
         chapterOne.isPermutation("ab", "ba"));
   }
+
+  @Test
+  public void testTacoCatAtcoCtaIsPermutation() {
+    assertTrue(
+        "String 'taco cat' is a permutation of 'atco cta' and should return true",
+        chapterOne.isPermutation("taco cat", "atco cta"));
+  }
 }
