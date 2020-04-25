@@ -27,4 +27,23 @@ public class IsUniqueTests {
   public void testStringWithTwoCharactersAAIsNotUnique() {
     assertFalse("String 'aa' is not unique and should return false", chapterOne.isUnique("aa"));
   }
+
+  @Test
+  public void testStringWithThreeCharactersABAIsNotUnique() {
+    assertFalse("String 'aba' is not unique an should return false", chapterOne.isUnique("aba"));
+  }
+
+  @Test
+  public void testStringWithThreeCharactersABCIsUnique() {
+    assertTrue("String 'aaa' is unique and should return true", chapterOne.isUnique("ABC"));
+  }
+
+  @Test
+  public void testLongStringWithCharactersAPEDNBRIsUnique() {
+    assertTrue("String 'APEDNBR' is unique and should return true", chapterOne.isUnique("APEDNBR"));
+  }
+  @Test
+  public void testLongStringWithCharactersABOYPEAIsUnique() {
+    assertFalse("String 'ABOYPEA' is not unique and should return false", chapterOne.isUnique("ABOYPEA"));
+  }
 }
