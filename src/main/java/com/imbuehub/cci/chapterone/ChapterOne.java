@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ChapterOne {
 
   public boolean isUnique(String s) {
-    if (s.length() == 1) return true;
+    if (s.length() <= 1) return true;
     else if (s.length() == 2) return s.charAt(0) != s.charAt(1);
     else {
       boolean[] charHasBeenSeen = new boolean[255];
@@ -16,5 +16,14 @@ public class ChapterOne {
       }
       return true;
     }
+  }
+
+  public boolean isUniqueNoDataStructure(String s) {
+    char[] chars = s.toCharArray();
+    Arrays.sort(chars);
+    for (int i = 0; i < chars.length - 1; i++) {
+      if (chars[i] == chars[i + 1]) return false;
+    }
+    return true;
   }
 }
